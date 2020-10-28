@@ -15,18 +15,20 @@ public class EnemyFollow : MonoBehaviour
 
     public int distence;
 
+   
+
 
     void Start()
     {
-       
-
-        rb = this.GetComponent<Rigidbody2D>();
+         rb = this.GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
    
     void Update()
     {
+
+
         if (coolDownTimer > 0)
         {
             coolDownTimer -= Time.deltaTime;
@@ -36,6 +38,7 @@ public class EnemyFollow : MonoBehaviour
             coolDownTimer = 0;
         }
 
+       
         Vector2 direction = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
         transform.up = direction;
 
@@ -48,7 +51,10 @@ public class EnemyFollow : MonoBehaviour
         {
             gameObject.GetComponent<EnemyShooting>().shoot();
             coolDownTimer = coolDown;
+          
         }
+
+       
 
 
     }

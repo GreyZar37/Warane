@@ -10,6 +10,13 @@ public class EnemyShooting : MonoBehaviour
     public Transform firePoint;
     public float bulletForce = 20f;
 
+ 
+
+    private void Start()
+    {
+     
+        
+    }
 
     // Update is called once per frame
     void Update()

@@ -16,10 +16,25 @@ public class GameManager : MonoBehaviour
     {
         if (PlayerHealth.playerIsDead == true)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             PlayerHealth.playerIsDead = false;
 
             Score.scoreValue = 0;
         }
     }
+
+
+    public void startGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    
+    public void exit()
+    {
+        Application.Quit();
+    }
+
+
+
+
 }
