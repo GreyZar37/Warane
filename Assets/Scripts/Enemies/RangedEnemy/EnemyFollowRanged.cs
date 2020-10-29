@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollowRanged : MonoBehaviour
 {
 
     public float speed;

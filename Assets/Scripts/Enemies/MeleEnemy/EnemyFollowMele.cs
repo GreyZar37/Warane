@@ -11,7 +11,7 @@ public class EnemyFollowMele: MonoBehaviour
     private Vector2 movement;
 
     public float coolDown;
-    public float coolDownTimer;
+    float coolDownTimer;
 
     public int distence;
 
@@ -47,18 +47,22 @@ public class EnemyFollowMele: MonoBehaviour
 
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
-        if(Vector2.Distance(transform.position, target.position) < distence && coolDownTimer == 0)
-        {
-            gameObject.GetComponent<EnemyShooting>().shoot();
-            coolDownTimer = coolDown;
-          
-        }
 
-       
+
+
 
 
     }
 
- 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if(coolDownTimer == 0)
+        {
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15);
+            coolDownTimer = coolDown;
+        }
+        
+        
+    }
 
 }

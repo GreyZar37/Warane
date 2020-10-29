@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject endMenu;
     public GameObject inGameCanvas;
+
+    private float delayTimer = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +31,18 @@ public class GameManager : MonoBehaviour
 
         if (PlayerHealth.playerIsDead == true)
         {
-            
-            endMenu.SetActive(true);
+            delayTimer -= Time.deltaTime;
             inGameCanvas.SetActive(false);
+            if (delayTimer <= 0)
+            {   
+                endMenu.SetActive(true);
+                
+
+                PlayerHealth.playerIsDead = false;
+                delayTimer = 0;
+            }
             
-            PlayerHealth.playerIsDead = false;
+            
         }
 
 

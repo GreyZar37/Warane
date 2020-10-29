@@ -346,12 +346,12 @@ GameObject:
   - component: {fileID: 1602143605019671922}
   - component: {fileID: 1602143605019671923}
   - component: {fileID: 1602143605019671920}
+  - component: {fileID: 1602143605019671921}
   - component: {fileID: 1602143605019671933}
   - component: {fileID: 1602143605019671932}
-  - component: {fileID: 1850048650420797080}
-  - component: {fileID: 993056687}
+  - component: {fileID: 1375350112}
   m_Layer: 0
-  m_Name: EnemyMele
+  m_Name: EnemyMachineGun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,7 +414,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bce36fd17173bb54a8a41242714d666b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4057c54ffb37a1042b4a527e8c07b1d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -446,6 +446,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1602143605019671921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602143605019671926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ea1ec14270ad44aa7f9a0e68599139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  target: {fileID: 0}
+  coolDown: 0.2
+  coolDownTimer: 0
+  distence: 8
 --- !u!61 &1602143605019671933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -459,7 +476,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0007888675, y: -0.20417242}
+  m_Offset: {x: 0.018149137, y: -0.19757773}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -470,7 +487,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6943549, y: 0.39061585}
+  m_Size: {x: 0.84270656, y: 0.40380523}
   m_EdgeRadius: 0
 --- !u!114 &1602143605019671932
 MonoBehaviour:
@@ -484,11 +501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ac3d0a87a18a14db30c34fa7c1fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 30
   currentHealth: 0
-  scoreGiveAmount: 2
+  scoreGiveAmount: 4
   healthBar: {fileID: 1602143604131354944}
---- !u!114 &1850048650420797080
+--- !u!114 &1375350112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,39 +514,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1602143605019671926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb3df0d8b1db39c4cab8301bd345ef25, type: 3}
+  m_Script: {fileID: 11500000, guid: 922f3330b89b52b4ea02d03d3f540a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6.5
-  target: {fileID: 0}
-  coolDown: 1
-  distence: 1
---- !u!61 &993056687
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602143605019671926}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.09257425, y: 0.25168622}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.06847185, y: 0.1899752}
-  m_EdgeRadius: 0
+  bulletPrefab: {fileID: 1915137827133955091, guid: dc174928e66e9b44386e5c0982706fc0, type: 3}
+  firePoint: {fileID: 1646875138}
+  bulletForce: 10
 --- !u!1 &1602143605668960270
 GameObject:
   m_ObjectHideFlags: 0

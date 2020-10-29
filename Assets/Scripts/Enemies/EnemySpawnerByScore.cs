@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawnerByScore : MonoBehaviour
 {
 
     public float spawnRadius = 7, time = 1.5f;
     public GameObject enemy;
+    public int scoreToSpawn;
 
-    public float startTheGameTimer = 5f;
+   
 
     float currentTimer;
     public float cooldownTimer;
@@ -22,15 +23,12 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
 
     {
-        startTheGameTimer -= Time.deltaTime;
+        
 
-        if (startTheGameTimer <= 0)
-        {
-            startTheGameTimer = 0;
-        }
 
-        if (startTheGameTimer == 0)
+        if (Score.scoreValue >= scoreToSpawn)
         {
+           
             currentTimer -= Time.deltaTime;
             if(currentTimer <= 0)
             {

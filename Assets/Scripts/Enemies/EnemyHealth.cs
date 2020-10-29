@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+    public int scoreGiveAmount;
 
     public HealthBar healthBar;
     // Start is called before the first frame update
@@ -25,7 +26,9 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy();
-            Score.scoreValue+=2;
+            Score.scoreValue += scoreGiveAmount;
+
+            GameObject.Find("DeathSound").GetComponent<AudioSource>().Play();
         }
     }
 
