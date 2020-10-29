@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    public int currentHealth;
+    public  static int currentHealth;
 
     public HealthBar healthBar;
 
@@ -31,7 +31,14 @@ public class PlayerHealth : MonoBehaviour
             playerIsDead = true;
             Destroy(gameObject);
         }
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
     }
+
+   
 
     
 

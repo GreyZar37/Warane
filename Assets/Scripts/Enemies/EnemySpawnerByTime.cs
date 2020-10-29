@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnerRanged : MonoBehaviour
+public class EnemySpawnerByTime : MonoBehaviour
 {
 
     public float spawnRadius = 7, time = 1.5f;
