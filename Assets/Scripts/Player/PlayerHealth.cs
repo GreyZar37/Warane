@@ -28,8 +28,8 @@ public class PlayerHealth : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            Destroy();
             playerIsDead = true;
+            Destroy(gameObject);
         }
     }
 
