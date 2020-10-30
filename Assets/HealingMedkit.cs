@@ -8,19 +8,23 @@ public class HealingMedkit : MonoBehaviour
 
     public int healthToGive;
 
-    public void OnTriggerEnter2D(Collider2D collider)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (collider.tag == "Player")
+        if (other.tag == "Player")
         {
-
-            PlayerHealth.currentHealth += healthToGive;
-            Destroy(gameObject);
             
+            other.gameObject.GetComponent<PlayerHealth>().Healing(healthToGive);
+            Destroy(gameObject);
+
         }
 
 
             
     }
 
-
+    
+    
+       
+    
+  
 }

@@ -48,6 +48,12 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    public void Healing(int healing)
+    {
+        currentHealth += healing;
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void Destroy()
     {
         Destroy(gameObject);
