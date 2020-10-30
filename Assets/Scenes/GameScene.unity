@@ -2327,6 +2327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173830502}
   - component: {fileID: 173830501}
+  - component: {fileID: 173830503}
   m_Layer: 0
   m_Name: InvWall (1)
   m_TagString: Untagged
@@ -2374,6 +2375,18 @@ Transform:
   m_Father: {fileID: 625904030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173830503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173830500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690c35cb537d18e47bd52784599a7617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &180919618
 GameObject:
   m_ObjectHideFlags: 0
@@ -14099,6 +14112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888669962}
   - component: {fileID: 888669961}
+  - component: {fileID: 888669963}
   m_Layer: 0
   m_Name: InvWall (3)
   m_TagString: Untagged
@@ -14146,6 +14160,18 @@ Transform:
   m_Father: {fileID: 625904030}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &888669963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888669960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690c35cb537d18e47bd52784599a7617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &894444218
 GameObject:
   m_ObjectHideFlags: 0
@@ -19978,6 +20004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228104262}
   - component: {fileID: 1228104261}
+  - component: {fileID: 1228104263}
   m_Layer: 0
   m_Name: InvWall (2)
   m_TagString: Untagged
@@ -20025,6 +20052,18 @@ Transform:
   m_Father: {fileID: 625904030}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1228104263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228104260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690c35cb537d18e47bd52784599a7617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1239524187
 GameObject:
   m_ObjectHideFlags: 0
@@ -30735,6 +30774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953123039}
   - component: {fileID: 1953123038}
+  - component: {fileID: 1953123040}
   m_Layer: 0
   m_Name: InvWall
   m_TagString: Untagged
@@ -30782,6 +30822,18 @@ Transform:
   m_Father: {fileID: 625904030}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953123040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953123037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690c35cb537d18e47bd52784599a7617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1959926104
 GameObject:
   m_ObjectHideFlags: 0
