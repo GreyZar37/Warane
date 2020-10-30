@@ -12,6 +12,10 @@ public class Shooting : MonoBehaviour
 
     float currentTimer;
     public float coolDowntimer;
+    public float lowCoolDownTimer;
+
+    public float buffDuration;
+
 
     AudioSource gunShotSound;
 
@@ -25,20 +29,48 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
+        
+        if(ShootBuff.playerIsBuffed == true)
+        {
+            buffDuration -= Time.deltaTime;
+        }
         currentTimer -= Time.deltaTime;
+
+
+
         if (currentTimer <= 0)
         {
             currentTimer = 0;
         }
 
-        if (Input.GetButtonDown("Fire1") && currentTimer == 0)
+        if (Input.GetButtonDown("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed)
         {
             shoot();
             gunShotSound.Play();
-            currentTimer = coolDowntimer;
+
+            if(ShootBuff.playerIsBuffed == true)
+            {
+                
+                if(buffDuration <= 0)
+                {
+                    buffDuration = 5;
+                    ShootBuff.playerIsBuffed = false;
+                    
+                }
+                else
+                {
+                    currentTimer = lowCoolDownTimer;
+                }
+                
+            }
+            else
+            {
+                currentTimer = coolDowntimer;
+            }
+            
         }
 
-
+        
       
     }
 
