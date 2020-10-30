@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ac3d0a87a18a14db30c34fa7c1fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 40
   currentHealth: 0
   scoreGiveAmount: 4
   healthBar: {fileID: 1602143604131354944}
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1915137827133955091, guid: dc174928e66e9b44386e5c0982706fc0, type: 3}
   firePoint: {fileID: 1646875138}
-  bulletForce: 10
+  bulletForce: 12
 --- !u!1 &1602143605668960270
 GameObject:
   m_ObjectHideFlags: 0

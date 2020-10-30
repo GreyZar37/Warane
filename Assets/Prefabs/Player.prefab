@@ -195,10 +195,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16522a93430da234b82aa4f26894a6cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1915137827133955091, guid: a0b3efd104d54564fb7d708119e0a7d9, type: 3}
+  bulletPrefab: {fileID: 1915137827133955091, guid: a07c9c5f003762f46a3002421c5947b5, type: 3}
   firePoint: {fileID: 1444502510567384439}
   bulletForce: 20
   coolDowntimer: 0.2
+  lowCoolDownTimer: 0.1
+  currentbuffDuration: 0
+  buffDuration: 9
 --- !u!61 &1020958794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -237,7 +240,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de97610a8ce80ba4c83fadacd278fc36, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.569
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -345,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444502510567384438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.082, y: 0.642, z: -0.461269}
+  m_LocalPosition: {x: 0.014, y: 0.642, z: -0.461269}
   m_LocalScale: {x: 0.37895542, y: 0.37895542, z: 0.37895542}
   m_Children: []
   m_Father: {fileID: 1444502509351917334}

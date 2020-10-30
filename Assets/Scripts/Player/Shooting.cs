@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
     public float coolDowntimer;
     public float lowCoolDownTimer;
 
+    public float currentbuffDuration;
     public float buffDuration;
 
 
@@ -21,6 +22,7 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
+        currentbuffDuration = buffDuration;
         gunShotSound = GetComponent<AudioSource>();
     }
 
@@ -29,10 +31,11 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        
-        if(ShootBuff.playerIsBuffed == true)
+       
+
+        if (ShootBuff.playerIsBuffed == true)
         {
-            buffDuration -= Time.deltaTime;
+            currentbuffDuration -= Time.deltaTime;
         }
         currentTimer -= Time.deltaTime;
 
@@ -43,32 +46,30 @@ public class Shooting : MonoBehaviour
             currentTimer = 0;
         }
 
-        if (Input.GetButtonDown("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed)
+        if (Input.GetButtonDown("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == false)
         {
             shoot();
             gunShotSound.Play();
-
-            if(ShootBuff.playerIsBuffed == true)
-            {
-                
-                if(buffDuration <= 0)
-                {
-                    buffDuration = 5;
-                    ShootBuff.playerIsBuffed = false;
-                    
-                }
-                else
-                {
-                    currentTimer = lowCoolDownTimer;
-                }
-                
-            }
-            else
-            {
-                currentTimer = coolDowntimer;
-            }
+            currentTimer = coolDowntimer;
             
         }
+        if (Input.GetButton("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == true)
+        {
+            shoot();
+            gunShotSound.Play();
+            currentTimer = lowCoolDownTimer;
+
+            if(currentbuffDuration <= 0)
+            {
+               
+                currentbuffDuration = buffDuration;
+                ShootBuff.playerIsBuffed = false;
+                
+
+
+            }
+        }
+        
 
         
       

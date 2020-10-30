@@ -14,6 +14,7 @@ public class HealingMedkit : MonoBehaviour
         {
             
             other.gameObject.GetComponent<PlayerHealth>().Healing(healthToGive);
+            GameObject.Find("MedkitSound").GetComponent<AudioSource>().Play();
             Destroy(gameObject);
 
         }

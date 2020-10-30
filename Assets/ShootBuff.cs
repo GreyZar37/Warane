@@ -14,6 +14,7 @@ public class ShootBuff : MonoBehaviour
         if (other.tag == "Player")
         {
             playerIsBuffed = true;
+            GameObject.Find("AmoSound").GetComponent<AudioSource>().Play();
             Destroy(gameObject);
         }
 
