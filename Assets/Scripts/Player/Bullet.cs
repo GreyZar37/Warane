@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    public int damage;
     
     private void OnTriggerEnter2D(Collider2D other)
     {  
@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
             {
 
             Destroy(gameObject);
-            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(5);
+            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
 
         }
            

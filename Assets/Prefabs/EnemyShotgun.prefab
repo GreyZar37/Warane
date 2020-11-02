@@ -406,10 +406,10 @@ GameObject:
   - component: {fileID: 1602143605019671922}
   - component: {fileID: 1602143605019671923}
   - component: {fileID: 1602143605019671920}
-  - component: {fileID: 1602143605019671921}
   - component: {fileID: 1602143605019671933}
   - component: {fileID: 1602143605019671932}
-  - component: {fileID: 1375350112}
+  - component: {fileID: 1662714458}
+  - component: {fileID: 1662714451}
   m_Layer: 0
   m_Name: EnemyShotgun
   m_TagString: Enemy
@@ -508,23 +508,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1602143605019671921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602143605019671926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ea1ec14270ad44aa7f9a0e68599139, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  target: {fileID: 0}
-  coolDown: 1
-  coolDownTimer: 0
-  distence: 8
 --- !u!61 &1602143605019671933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -563,11 +546,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ac3d0a87a18a14db30c34fa7c1fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 30
   currentHealth: 0
-  scoreGiveAmount: 1
+  scoreGiveAmount: 5
   healthBar: {fileID: 1602143604131354944}
---- !u!114 &1375350112
+--- !u!114 &1662714458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -576,12 +559,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1602143605019671926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922f3330b89b52b4ea02d03d3f540a38, type: 3}
+  m_Script: {fileID: 11500000, guid: a992582ee3322d448a47de2b31f12bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1915137827133955091, guid: dc174928e66e9b44386e5c0982706fc0, type: 3}
+  bulletPrefab: {fileID: 1915137827133955091, guid: 3132ef73fcae8ae44a8d5cba1a9ed49f, type: 3}
   firePoint: {fileID: 1646875138}
+  firePointTwo: {fileID: 1824618544}
+  firePointThree: {fileID: 1726171771}
   bulletForce: 10
+--- !u!114 &1662714451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602143605019671926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05540cddfe8ecbc4a973c32eac5e6ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  target: {fileID: 0}
+  coolDown: 2
+  coolDownTimer: 0
+  distence: 5
 --- !u!1 &1602143605668960270
 GameObject:
   m_ObjectHideFlags: 0

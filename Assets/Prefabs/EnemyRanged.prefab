@@ -503,7 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  scoreGiveAmount: 1
+  scoreGiveAmount: 40
   healthBar: {fileID: 1602143604131354944}
 --- !u!114 &1375350112
 MonoBehaviour:
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922f3330b89b52b4ea02d03d3f540a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1915137827133955091, guid: dc174928e66e9b44386e5c0982706fc0, type: 3}
+  bulletPrefab: {fileID: 1915137827133955091, guid: 3132ef73fcae8ae44a8d5cba1a9ed49f, type: 3}
   firePoint: {fileID: 1646875138}
   bulletForce: 10
 --- !u!1 &1602143605668960270

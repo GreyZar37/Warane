@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3645652811240848559}
   - component: {fileID: 3893687586223810487}
   - component: {fileID: 7927011123642544309}
-  - component: {fileID: 2809861909184698429}
+  - component: {fileID: -8510080623501403037}
   m_Layer: 0
-  m_Name: PlayerBullet
+  m_Name: EnemySniperBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915137827133955091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.595, y: 0.9294, z: 0}
-  m_LocalScale: {x: 0.27052045, y: 0.32241362, z: 0.15728617}
+  m_LocalPosition: {x: 0.6141, y: 1.2759, z: 0}
+  m_LocalScale: {x: 0.30133444, y: 0.9981702, z: 0.14954036}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0023277104, y: 0.033028916}
+  m_Offset: {x: 0.0028758198, y: -0.0011079907}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,9 +130,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33120513, y: 0.89070594}
+  m_Size: {x: 0.26876304, y: 0.9589797}
   m_EdgeRadius: 0
---- !u!114 &2809861909184698429
+--- !u!114 &-8510080623501403037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1915137827133955091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed27b72a8e401d04ba30ceed14aee980, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d30214425eb0ba409a84f021b8c578a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 25
