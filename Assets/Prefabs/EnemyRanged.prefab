@@ -503,7 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  scoreGiveAmount: 40
+  scoreGiveAmount: 1
   healthBar: {fileID: 1602143604131354944}
 --- !u!114 &1375350112
 MonoBehaviour:
