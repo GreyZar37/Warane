@@ -58,6 +58,7 @@ public class EnemyFollowMele: MonoBehaviour
     {
         if(coolDownTimer == 0)
         {
+            if(other!=null)
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15);
             coolDownTimer = coolDown;
         }

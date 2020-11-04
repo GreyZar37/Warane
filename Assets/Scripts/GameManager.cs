@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject inGameCanvas;
 
     private float delayTimer = 1f;
+
+
     // Start is called before the first frame update
     void Start()
     {
