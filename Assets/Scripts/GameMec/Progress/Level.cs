@@ -76,6 +76,6 @@ public class Level : MonoBehaviour
             PlayerPrefs.SetFloat("currentXp", currentXp);
             PlayerPrefs.SetInt("level", level);
         }
-        print(level);
+
     }
 }
