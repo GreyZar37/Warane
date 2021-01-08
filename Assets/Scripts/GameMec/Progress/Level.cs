@@ -13,7 +13,7 @@ public class Level : MonoBehaviour
 
     public TextMeshProUGUI levelText;
 
-    public int xpNeeded = 30;
+    public int xpNeeded = 25;
     public float currentXp = 0;
     public int level = 0;
 
@@ -24,6 +24,8 @@ public class Level : MonoBehaviour
     void Start()
     {
 
+        PlayerPrefs.DeleteAll();
+
         xpNeeded = PlayerPrefs.GetInt("xpNeeded", 0);
         currentXp = PlayerPrefs.GetFloat("currentXp", 0);
         level = PlayerPrefs.GetInt("level", 0);
@@ -33,6 +35,10 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            currentXp += 10000;
+        }
 
         levelText.text = "Level " + level;
 
@@ -51,25 +57,29 @@ public class Level : MonoBehaviour
             }
 
 
-            if (level >= 1 && level < 5)
+            if (level >= 1 && level < 10)
             {
-                xpNeeded += 50;
+                xpNeeded += 15;
             }
 
-            if (level >= 10 && level < 15)
+            if (level >= 10 && level < 30)
             {
-                xpNeeded += 70;
+                xpNeeded += 25;
             }
-            if (level >= 30 && level < 25)
+            if (level >= 30 && level < 70)
             {
-                xpNeeded += 120;
+                xpNeeded += 30;
             }
-            if (level >= 70 && level < 75)
+            if (level >= 70 && level < 99)
             {
-                xpNeeded += 150;
+                xpNeeded += 35;
+            }
+            if (level == 99)
+            {
+                xpNeeded = 3000;
             }
 
-            
+
         }
 
         if (PlayerHealth.currentHealth == 0 && !haveHandled)
