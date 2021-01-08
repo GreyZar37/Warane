@@ -19,13 +19,13 @@ public class Money : MonoBehaviour
 
     void Start()
     {
-        
+        money = PlayerPrefs.GetInt("Money", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+
 
         if (PlayerHealth.currentHealth <= 0)
         {
@@ -52,7 +52,7 @@ public class Money : MonoBehaviour
                 counter++;
             }
 
-            money = PlayerPrefs.GetInt("Money", 0);
+            
         }
 
     }

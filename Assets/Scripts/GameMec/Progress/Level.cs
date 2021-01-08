@@ -13,36 +13,33 @@ public class Level : MonoBehaviour
 
     public TextMeshProUGUI levelText;
 
-    public int xpNeeded = 50;
+    public int xpNeeded = 30;
     public float currentXp = 0;
     public int level = 0;
 
+    public bool haveHandled;
 
 
     // Start is called before the first frame update
     void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
     {
 
         xpNeeded = PlayerPrefs.GetInt("xpNeeded", 0);
         currentXp = PlayerPrefs.GetFloat("currentXp", 0);
         level = PlayerPrefs.GetInt("level", 0);
 
-        if (PlayerHealth.currentHealth == 0)
-        {
-            currentXp = Score.scoreValue;
-        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         levelText.text = "Level " + level;
 
         slider.maxValue = xpNeeded;
         slider.value = currentXp;
 
-
+     
         if (slider.value == slider.maxValue)
         {
 
@@ -54,23 +51,32 @@ public class Level : MonoBehaviour
             }
 
 
-            if (level >= 1 && level < 10)
+            if (level >= 1 && level < 5)
             {
                 xpNeeded += 50;
             }
 
-            if (level >= 10 && level < 30)
+            if (level >= 10 && level < 15)
             {
                 xpNeeded += 70;
             }
-            if (level >= 30 && level < 50)
+            if (level >= 30 && level < 25)
             {
                 xpNeeded += 120;
             }
-            if (level >= 70 && level < 100)
+            if (level >= 70 && level < 75)
             {
                 xpNeeded += 150;
             }
+
+            
+        }
+
+        if (PlayerHealth.currentHealth == 0 && !haveHandled)
+        {
+
+            haveHandled = true;
+            currentXp += Score.scoreValue;
 
             PlayerPrefs.SetInt("xpNeeded", xpNeeded);
             PlayerPrefs.SetFloat("currentXp", currentXp);

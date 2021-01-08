@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -29,10 +29,9 @@ public class Score : MonoBehaviour
         InGamescoreText.text = ("Score: " + scoreValue);
         scoreText.text = scoreValue.ToString();
 
-
         highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
 
-        if(PlayerHealth.currentHealth <= 0)
+        if (PlayerHealth.currentHealth <= 0)
         {
             setHighScore();
         }

@@ -13315,6 +13315,7 @@ MonoBehaviour:
   xpNeeded: 30
   currentXp: 0
   level: 0
+  haveHandled: 0
 --- !u!114 &682428721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67662,6 +67663,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1444502509351917335, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1444502510567384439, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.014
