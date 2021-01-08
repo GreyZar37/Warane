@@ -13312,7 +13312,7 @@ MonoBehaviour:
   slider: {fileID: 1029112473}
   fill: {fileID: 1871216384}
   levelText: {fileID: 250222871}
-  xpNeeded: 30
+  xpNeeded: 15
   currentXp: 0
   level: 0
   haveHandled: 0

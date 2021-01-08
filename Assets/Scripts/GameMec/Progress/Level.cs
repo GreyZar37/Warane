@@ -13,7 +13,7 @@ public class Level : MonoBehaviour
 
     public TextMeshProUGUI levelText;
 
-    public int xpNeeded = 25;
+    public int xpNeeded = 0;
     public float currentXp = 0;
     public int level = 0;
 
@@ -24,8 +24,6 @@ public class Level : MonoBehaviour
     void Start()
     {
 
-        PlayerPrefs.DeleteAll();
-
         xpNeeded = PlayerPrefs.GetInt("xpNeeded", 0);
         currentXp = PlayerPrefs.GetFloat("currentXp", 0);
         level = PlayerPrefs.GetInt("level", 0);
@@ -35,11 +33,7 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            currentXp += 10000;
-        }
-
+        
         levelText.text = "Level " + level;
 
         slider.maxValue = xpNeeded;
