@@ -7820,7 +7820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ambush Clered
+  m_text: Ambush Cleared
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8a1199f06ef87548920e26788a1a91f, type: 2}
   m_sharedMaterial: {fileID: -3586986487840368627, guid: b8a1199f06ef87548920e26788a1a91f, type: 2}
@@ -16114,7 +16114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ambush Clered
+  m_text: Ambush Cleared
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8a1199f06ef87548920e26788a1a91f, type: 2}
   m_sharedMaterial: {fileID: -3586986487840368627, guid: b8a1199f06ef87548920e26788a1a91f, type: 2}
@@ -67250,7 +67250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ambush Clered
+  m_text: Ambush Cleared
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8a1199f06ef87548920e26788a1a91f, type: 2}
   m_sharedMaterial: {fileID: -3586986487840368627, guid: b8a1199f06ef87548920e26788a1a91f, type: 2}
