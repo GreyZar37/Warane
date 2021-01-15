@@ -506,6 +506,8 @@ GameObject:
   m_Component:
   - component: {fileID: 18475712}
   - component: {fileID: 18475713}
+  - component: {fileID: 18475715}
+  - component: {fileID: 18475714}
   m_Layer: 0
   m_Name: Bush (450)
   m_TagString: Untagged
@@ -578,6 +580,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &18475714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18475711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c0fa0b39bfd9438ee20f2d4769dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &18475715
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18475711}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.013264145, y: -0.0365588}
+  serializedVersion: 2
+  m_Radius: 0.37036535
 --- !u!1 &33487600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2244,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &137104423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 137104425}
+  - component: {fileID: 137104424}
+  m_Layer: 0
+  m_Name: CameraFollow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &137104424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137104423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aec5388a6c8b6840969588f65064c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1674725810}
+  smoothSpeed: 0.27
+  offset: {x: 0, y: 0, z: -5}
+--- !u!4 &137104425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137104423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 519420032}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144546362
 GameObject:
   m_ObjectHideFlags: 0
@@ -36081,6 +36158,8 @@ GameObject:
   m_Component:
   - component: {fileID: 484191271}
   - component: {fileID: 484191272}
+  - component: {fileID: 484191273}
+  - component: {fileID: 484191274}
   m_Layer: 0
   m_Name: Bush (416)
   m_TagString: Untagged
@@ -36153,6 +36232,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &484191273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484191270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c0fa0b39bfd9438ee20f2d4769dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &484191274
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484191270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0019426644, y: -0.005076401}
+  serializedVersion: 2
+  m_Radius: 0.37498733
 --- !u!1 &484321871
 GameObject:
   m_ObjectHideFlags: 0
@@ -37229,7 +37336,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420033}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
@@ -37256,12 +37362,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aec5388a6c8b6840969588f65064c31, type: 3}
+  m_Script: {fileID: 11500000, guid: f3466b749d3b6654ab5192ed252e3bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1674725810}
-  smoothSpeed: 0.125
-  offset: {x: 0, y: 1, z: -5}
+  duration: 0.36
+  smoothTime: 3
+  speed: 0.73
+  magnitude: 0.43
+  test: 0
+  player: {fileID: 137104425}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -37313,28 +37422,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -1.34, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 137104425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3466b749d3b6654ab5192ed252e3bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.5
-  speed: 1
-  magnitude: 0.1
-  test: 0
 --- !u!1 &527935197
 GameObject:
   m_ObjectHideFlags: 0
@@ -48682,6 +48775,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1083474877}
   - component: {fileID: 1083474878}
+  - component: {fileID: 1083474880}
+  - component: {fileID: 1083474879}
   m_Layer: 0
   m_Name: Bush (421)
   m_TagString: Untagged
@@ -48754,6 +48849,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1083474879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083474876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c0fa0b39bfd9438ee20f2d4769dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1083474880
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083474876}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01483035, y: -0.04087575}
+  serializedVersion: 2
+  m_Radius: 0.35867935
 --- !u!1 &1084845901
 GameObject:
   m_ObjectHideFlags: 0
@@ -67580,6 +67703,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2040920929}
   - component: {fileID: 2040920930}
+  - component: {fileID: 2040920932}
+  - component: {fileID: 2040920931}
   m_Layer: 0
   m_Name: Bush (449)
   m_TagString: Untagged
@@ -67652,6 +67777,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2040920931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040920928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c0fa0b39bfd9438ee20f2d4769dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2040920932
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040920928}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0069301766, y: -0.019101746}
+  serializedVersion: 2
+  m_Radius: 0.38485214
 --- !u!1 &2048799279
 GameObject:
   m_ObjectHideFlags: 0
@@ -68415,6 +68568,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2090636715}
   - component: {fileID: 2090636716}
+  - component: {fileID: 2090636718}
+  - component: {fileID: 2090636717}
   m_Layer: 0
   m_Name: Bush (451)
   m_TagString: Untagged
@@ -68487,6 +68642,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2090636717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090636714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c0fa0b39bfd9438ee20f2d4769dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2090636718
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090636714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00846186, y: -0.023323005}
+  serializedVersion: 2
+  m_Radius: 0.36354232
 --- !u!1 &2098807980
 GameObject:
   m_ObjectHideFlags: 0
@@ -68497,6 +68680,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2098807981}
   - component: {fileID: 2098807982}
+  - component: {fileID: 2098807984}
+  - component: {fileID: 2098807983}
   m_Layer: 0
   m_Name: Bush (452)
   m_TagString: Untagged
@@ -68569,6 +68754,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2098807983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098807980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c0fa0b39bfd9438ee20f2d4769dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2098807984
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098807980}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008842551, y: -0.024372445}
+  serializedVersion: 2
+  m_Radius: 0.357402
 --- !u!1 &2100322622
 GameObject:
   m_ObjectHideFlags: 0
@@ -96821,6 +97034,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7652105739335423838, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19520304
+      objectReference: {fileID: 0}
+    - target: {fileID: -7652105739335423838, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_Size.y
+      value: 0.44412553
+      objectReference: {fileID: 0}
+    - target: {fileID: -7652105739335423838, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0074990094
+      objectReference: {fileID: 0}
+    - target: {fileID: -7652105739335423838, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7442283
+      objectReference: {fileID: 0}
+    - target: {fileID: -7652105739335423838, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020958794, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19617769
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020958794, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_Size.y
+      value: 0.44179147
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020958794, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446833949, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1444502509351917323, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
       propertyPath: m_Name
       value: Player
@@ -96839,15 +97088,15 @@ PrefabInstance:
       objectReference: {fileID: 1626837259}
     - target: {fileID: 1444502509351917334, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1444502509351917334, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1444502509351917334, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.33955544
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1444502509351917334, guid: d07e8927913ee844a8d0f462c66583da, type: 3}
       propertyPath: m_LocalRotation.x

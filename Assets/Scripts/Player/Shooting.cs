@@ -17,8 +17,7 @@ public class Shooting : MonoBehaviour
     public float currentbuffDuration;
     public float buffDuration;
 
-   
-    
+    public GameObject perlinShake;
 
 
     AudioSource gunShotSound;
@@ -27,8 +26,8 @@ public class Shooting : MonoBehaviour
     {
         currentbuffDuration = buffDuration;
         gunShotSound = GetComponent<AudioSource>();
+        perlinShake = GameObject.FindGameObjectWithTag("MainCamera");
 
-      
     }
 
 
@@ -55,6 +54,8 @@ public class Shooting : MonoBehaviour
         {
             shoot();
             gunShotSound.Play();
+            perlinShake.GetComponent<PerlinShake>().PlayShake();
+            
             currentTimer = coolDowntimer;
             
 
@@ -64,8 +65,9 @@ public class Shooting : MonoBehaviour
         {
             shoot();
             gunShotSound.Play();
-         
-         
+            perlinShake.GetComponent<PerlinShake>().PlayShake();
+
+
             currentTimer = lowCoolDownTimer;
 
             if(currentbuffDuration <= 0)
@@ -74,7 +76,7 @@ public class Shooting : MonoBehaviour
                 currentbuffDuration = buffDuration;
                 ShootBuff.playerIsBuffed = false;
                 
-
+                
 
             }
         }
@@ -89,6 +91,7 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
 
     }
 }

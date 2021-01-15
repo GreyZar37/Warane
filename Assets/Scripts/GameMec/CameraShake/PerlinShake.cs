@@ -4,10 +4,13 @@ using System.Collections;
 public class PerlinShake : MonoBehaviour {
 	
 	public float duration = 0.5f;
+	public float smoothTime;
 	public float speed = 1.0f;
 	public float magnitude = 0.1f;
 	
 	public bool test = false;
+
+	public Transform player;
 	
 	// -------------------------------------------------------------------------
 	public void PlayShake() {
@@ -29,11 +32,15 @@ public class PerlinShake : MonoBehaviour {
 		
 		float elapsed = 0.0f;
 		
-		Vector3 originalCamPos = transform.position;
-		float randomStart = Random.Range(-1000.0f, 1000.0f);
 		
+		float randomStart = Random.Range(-1000.0f, 1000.0f);
+
+		Vector3 originalCamPos = transform.localPosition;
+
 		while (elapsed < duration) {
+
 			
+
 			elapsed += Time.deltaTime;			
 			
 			float percentComplete = elapsed / duration;			
@@ -51,11 +58,21 @@ public class PerlinShake : MonoBehaviour {
 			x *= magnitude * damper;
 			y *= magnitude * damper;
 
-            transform.position = new Vector3(x + originalCamPos.x, y + originalCamPos.y, originalCamPos.z);
+            transform.localPosition = new Vector3(x + originalCamPos.x, y + originalCamPos.y, originalCamPos.z);
 				
 			yield return null;
 		}
+
+		elapsed = 0;
+
+		while(elapsed < smoothTime)
+        {
+			float procent = elapsed / smoothTime;
+			transform.localPosition = Vector3.Lerp(transform.localPosition, Vector3.zero, procent);
+			elapsed += Time.deltaTime;
+			yield return null;
+        }
 		
-		transform.position = originalCamPos;
+		//transform.localPosition = Vector3.zero;
 	}
 }
