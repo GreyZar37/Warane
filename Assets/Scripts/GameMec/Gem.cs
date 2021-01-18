@@ -7,11 +7,13 @@ public class Gem : MonoBehaviour
     // Start is called before the first frame update
 
     public Texture2D cursorArrow;
+    public Vector2 offset;
+
     void Start()
 
    
     {
-        Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
+        Cursor.SetCursor(cursorArrow, offset, CursorMode.ForceSoftware);
     }
 
   

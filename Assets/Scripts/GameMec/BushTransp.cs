@@ -23,13 +23,15 @@ public class BushTransp : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D other)
     {
         sprite.color = new Color(1, 1, 1, 0.6f);
+
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
         sprite.color = new Color(1, 1, 1, 1f);
+     
     }
 
 }

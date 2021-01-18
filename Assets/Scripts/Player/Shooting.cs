@@ -50,7 +50,7 @@ public class Shooting : MonoBehaviour
             currentTimer = 0;
         }
 
-        if (Input.GetButtonDown("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == false)
+        if (Input.GetButtonDown("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == false && GameManager.isPaused == false)
         {
             shoot();
             gunShotSound.Play();
@@ -61,7 +61,7 @@ public class Shooting : MonoBehaviour
 
 
         }
-        if (Input.GetButton("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == true)
+        if (Input.GetButton("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == true && GameManager.isPaused == false)
         {
             shoot();
             gunShotSound.Play();

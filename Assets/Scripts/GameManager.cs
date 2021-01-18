@@ -11,8 +11,15 @@ public class GameManager : MonoBehaviour
     public GameObject endMenu;
     public GameObject inGameCanvas;
 
+    public GameObject returnButton;
+    public GameObject resumeButton;
+
     private float delayTimer = 1f;
 
+    public static bool isPaused;
+
+    public GameObject optionMenu;
+    public GameObject gameOverCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -49,12 +56,67 @@ public class GameManager : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown(KeyCode.Escape) && isPaused == false && PlayerHealth.currentHealth > 0)
+        {
+            Time.timeScale = 0;
+            isPaused = true;
+            optionMenu.SetActive(true);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused == true && PlayerHealth.currentHealth > 0)
+        {
+            Time.timeScale = 1;
+            isPaused = false;
+            optionMenu.SetActive(false);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused == false && PlayerHealth.currentHealth <= 0)
+        {
+            optionMenu.SetActive(false);
+
+            returnButton.SetActive(false);
+            resumeButton.SetActive(true);
+
+            gameOverCanvas.SetActive(true);
+        }
+
+
+
     }
+
 
 
     public void startGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+
+    public void resumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
+        optionMenu.SetActive(false);
+    }
+
+    public void back()
+    {
+        optionMenu.SetActive(false);
+
+        returnButton.SetActive(false);
+        resumeButton.SetActive(true);
+
+        gameOverCanvas.SetActive(true);
+    }
+
+    public void optionMenuShow()
+    {
+        optionMenu.SetActive(true);
+
+        returnButton.SetActive(true);
+        resumeButton.SetActive(false);
+
+        gameOverCanvas.SetActive(false);
     }
 
     public void startNewGame()
