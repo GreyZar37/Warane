@@ -62,6 +62,7 @@ public class SpawnerTest : MonoBehaviour
 
         if (Score.scoreValue >= scoreToBeginWave && Score.scoreValue < scoreToEndWave)
         {
+            
             SpawnText.gameObject.SetActive(true);
             spawner.gameObject.SetActive(false);
             waveSpawner.gameObject.SetActive(true);
@@ -69,8 +70,8 @@ public class SpawnerTest : MonoBehaviour
         }
         else if (Score.scoreValue >= scoreToEndWave)
         {
-
-            spawnCleredText.gameObject.SetActive(true);
+            
+            spawnCleredText.gameObject.SetActive(true);     
             waveSpawner.gameObject.SetActive(false);
             spawner.gameObject.SetActive(true);
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
