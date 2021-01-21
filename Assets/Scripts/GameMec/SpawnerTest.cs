@@ -35,6 +35,8 @@ public class SpawnerTest : MonoBehaviour
     public int scoreToBeginWaveThree;
     public int scoreToEndWaveThree;
 
+    public int wave;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,37 +48,56 @@ public class SpawnerTest : MonoBehaviour
     void Update()
     {
 
-        newWave(spawner, waveSpawnerThree, spawnTextThree, spawnCleredTextThree, scoreToBeginWaveThree, scoreToEndWaveThree);
+        if(wave == 2)
+        {
+            newWave(spawner, waveSpawnerThree, spawnTextThree, spawnCleredTextThree, scoreToBeginWaveThree, scoreToEndWaveThree);
+        }
+      
+        if(wave == 1)
+        {
+            newWave(spawner, waveSpawnerTwo, spawnTextTwo, spawnCleredTextTwo, scoreToBeginWaveTwo, scoreToEndWaveTwo);
+        }
+       
 
-        newWave(spawner, waveSpawnerTwo, spawnTextTwo, spawnCleredTextTwo, scoreToBeginWaveTwo, scoreToEndWaveTwo);
+        if(wave == 0)
+        {
+            newWave(spawner, waveSpawner, spawnText, spawnCleredText, scoreToBeginWave, scoreToEndWave);
+        }
 
-        newWave(spawner, waveSpawner, spawnText, spawnCleredText, scoreToBeginWave, scoreToEndWave);
-       
-        
-       
-       
+
+
     }
 
-    void newWave(GameObject spawner, GameObject waveSpawner, GameObject SpawnText, GameObject spawnCleredText, int scoreToBeginWave, int scoreToEndWave)
+    void newWave(GameObject spawner, GameObject waveSpawner, GameObject SpawnText, GameObject SpawnCleredText, int scoreToBeginWave, int scoreToEndWave)
     {
 
         if (Score.scoreValue >= scoreToBeginWave && Score.scoreValue < scoreToEndWave)
         {
+            if (SpawnText)
+            {
+              SpawnText.gameObject.SetActive(true);
+            }
             
-            SpawnText.gameObject.SetActive(true);
             spawner.gameObject.SetActive(false);
             waveSpawner.gameObject.SetActive(true);
 
         }
         else if (Score.scoreValue >= scoreToEndWave)
         {
-            
-            spawnCleredText.gameObject.SetActive(true);     
+
+
+            if (SpawnCleredText)
+            {
+                SpawnCleredText.gameObject.SetActive(true);
+            }
+
             waveSpawner.gameObject.SetActive(false);
             spawner.gameObject.SetActive(true);
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject enemy in enemies)
             GameObject.Destroy(enemy);
+
+            wave++;
 
         }
 

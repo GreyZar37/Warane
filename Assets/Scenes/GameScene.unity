@@ -38625,7 +38625,7 @@ MonoBehaviour:
   time: 2
   enemy: {fileID: 1602143605019671926, guid: fb16c72a0e1391942a125e8a313cc4bc, type: 3}
   startTheGameTimer: 5
-  cooldownTimer: 2
+  cooldownTimer: 1.2
 --- !u!4 &534894978
 Transform:
   m_ObjectHideFlags: 0
@@ -42515,6 +42515,7 @@ MonoBehaviour:
   spawnCleredTextThree: {fileID: 1727541948}
   scoreToBeginWaveThree: 200
   scoreToEndWaveThree: 250
+  wave: 0
 --- !u!114 &682428720
 MonoBehaviour:
   m_ObjectHideFlags: 0

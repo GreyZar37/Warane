@@ -35,7 +35,11 @@ public class SfxVolume : MonoBehaviour
         audioSourceAmmo.GetComponent<AudioSource>().volume = sliderValueSFX;
         audioSourceHealth.GetComponent<AudioSource>().volume = sliderValueSFX;
         audioSourceDeath.GetComponent<AudioSource>().volume = sliderValueSFX;
-        audioSourceShoots.GetComponent<AudioSource>().volume = sliderValueSFX;
+
+        if (audioSourceShoots != null)
+        {
+          audioSourceShoots.GetComponent<AudioSource>().volume = sliderValueSFX;
+        }
 
         PlayerPrefs.SetFloat("SFXVolume", sliderValueSFX);
 

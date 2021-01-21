@@ -56,14 +56,16 @@ public class EnemyFollowMele: MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(coolDownTimer == 0)
+        if (coolDownTimer == 0)
         {
-            if(other!=null)
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15);
-            coolDownTimer = coolDown;
-        }
-        
-        
-    }
+            if (other.gameObject.GetComponent<PlayerHealth>())
+            {
+                other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15);
+                coolDownTimer = coolDown;
+            }
+               
 
+
+        }
+    }
 }

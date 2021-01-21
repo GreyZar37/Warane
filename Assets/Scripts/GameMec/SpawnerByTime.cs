@@ -13,16 +13,20 @@ public class SpawnerByTime : MonoBehaviour
     float currentTimer;
     public float cooldownTimer;
 
+    GameObject player;
+
     void Start()
     {
-
-
+       player = GameObject.Find("Player");
     }
 
     private void Update()
 
     {
         startTheGameTimer -= Time.deltaTime;
+
+        
+        
 
         if (startTheGameTimer <= 0)
         {
@@ -47,9 +51,14 @@ public class SpawnerByTime : MonoBehaviour
 
     public void SpawnAnEnemy()
     {
-        Vector2 spawnPos = GameObject.Find("Player").transform.position;
-        spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
-        Instantiate(enemy, spawnPos, Quaternion.identity);   
+        
+        if(player != null)
+        {
+           Vector2 spawnPos = player.transform.position;
+           spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
+           Instantiate(enemy, spawnPos, Quaternion.identity);
+        }
+       
 
     }
    

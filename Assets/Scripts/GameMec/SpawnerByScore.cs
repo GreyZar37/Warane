@@ -9,15 +9,15 @@ public class SpawnerByScore : MonoBehaviour
     public GameObject enemy;
     public int scoreToSpawn;
 
-   
+    GameObject player;
 
     float currentTimer;
     public float cooldownTimer;
 
     void Start()
     {
-
-
+        player = GameObject.Find("Player");
+        
     }
 
     private void Update()
@@ -45,10 +45,12 @@ public class SpawnerByScore : MonoBehaviour
 
     public void SpawnAnEnemy()
     {
-        Vector2 spawnPos = GameObject.Find("Player").transform.position;
+        if (player != null)
+        {
+        Vector2 spawnPos = player.transform.position;
         spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
-        Instantiate(enemy, spawnPos, Quaternion.identity);   
-
+        Instantiate(enemy, spawnPos, Quaternion.identity);
+        }
     }
    
 }
