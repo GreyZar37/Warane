@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 
@@ -21,10 +22,17 @@ public class GameManager : MonoBehaviour
     public GameObject optionMenu;
     public GameObject gameOverCanvas;
 
+    public GameObject signUpMenu;
+
+    public InputField inputfield;
+    
+
     // Start is called before the first frame update
     void Start()
     {
+       Score.guestName = PlayerPrefs.GetString("PlayerName", "");
         
+       
     }
 
     // Update is called once per frame
@@ -82,6 +90,10 @@ public class GameManager : MonoBehaviour
 
 
 
+        if (string.IsNullOrEmpty(Score.guestName))
+        {
+            signUpMenu.SetActive(true);
+        }
     }
 
 
@@ -130,7 +142,17 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-   
+    public void signUp()
+    {
+        if(inputfield.text != "")
+        {
+          signUpMenu.SetActive(false);
+          Score.guestName = inputfield.text;
+          PlayerPrefs.SetString("PlayerName", Score.guestName); 
+        }
+       
+    }
+
 
 
 }
