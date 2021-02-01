@@ -23,7 +23,7 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+       
     }
 
     
@@ -37,22 +37,24 @@ public class Score : MonoBehaviour
         scoreText.text = scoreValue.ToString();
         highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
 
-        if(PlayerHealth.currentHealth <= 0 && wasSaved == false)
-        {
       
-
-            GameJolt.API.Scores.Add(PlayerPrefs.GetInt("HighScore", 0), "High Score", guestName, 583080, "", (bool success) => {
-                Debug.Log(string.Format("Score Add {0}.", success ? "Successful" : "Failed"));
-            });
-
-            wasSaved = true;
-            
-        }
       
 
         if (PlayerHealth.currentHealth <= 0)
         {
             setHighScore();
+        }
+
+
+        if (PlayerHealth.currentHealth <= 0 && wasSaved == false)
+        {
+            
+                GameJolt.API.Scores.Add(PlayerPrefs.GetInt("HighScore", 0), "High Score", guestName, 583080, "", (bool success) => {
+                    Debug.Log(string.Format("Score Add {0}.", success ? "Successful" : "Failed"));
+                });
+
+                wasSaved = true;
+   
         }
     }
 

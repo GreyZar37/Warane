@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
        Score.guestName = PlayerPrefs.GetString("PlayerName", "");
+
         
-       
     }
 
     // Update is called once per frame
@@ -89,11 +89,16 @@ public class GameManager : MonoBehaviour
         }
 
 
-
+        
         if (string.IsNullOrEmpty(Score.guestName))
         {
-            signUpMenu.SetActive(true);
+            if (signUpMenu != null)
+            {
+                signUpMenu.SetActive(true);
+            }
+            
         }
+        
     }
 
 
