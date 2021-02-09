@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverCanvas;
 
     public GameObject signUpMenu;
+    public GameObject upgradeMenu;
 
     public InputField inputfield;
     
@@ -116,7 +117,7 @@ public class GameManager : MonoBehaviour
         optionMenu.SetActive(false);
     }
 
-    public void back()
+    public void backFromOptionMenu()
     {
         optionMenu.SetActive(false);
 
@@ -158,6 +159,36 @@ public class GameManager : MonoBehaviour
        
     }
 
+    public void upgradeMenuOn()
+    {
+        
+       upgradeMenu.SetActive(true);
+       gameOverCanvas.SetActive(false);
 
+    }
+    public void upgradeMenuOff()
+    {
+        
+       upgradeMenu.SetActive(false);
+       gameOverCanvas.SetActive(true);
+
+    }
+
+    public void upgreadeHealth()
+    {
+        PlayerHealth.maxHealth++;
+    }
+    public void upgreadeDamage()
+    {
+        Bullet.playerDamage++;
+    }
+    public void upgreadeSpeed()
+    {
+        PlayerMovement.playerSpeed += 0.25f;
+    }
+    public void upgreadeAttackSpeed()
+    {
+        Shooting.playerCoolDowntimer -= 0.15f;
+    }
 
 }

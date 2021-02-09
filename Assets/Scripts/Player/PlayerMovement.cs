@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 5f;
+    public static float playerSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
     Vector2 movement;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement.normalized * playerSpeed * Time.fixedDeltaTime);
 
         Vector2 lookdir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;

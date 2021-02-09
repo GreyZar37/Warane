@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     float currentTimer;
-    public float coolDowntimer;
+    public static float playerCoolDowntimer = 1;
     public float lowCoolDownTimer;
 
     public float currentbuffDuration;
@@ -56,7 +56,7 @@ public class Shooting : MonoBehaviour
             gunShotSound.Play();
             perlinShake.GetComponent<PerlinShake>().PlayShake();
             
-            currentTimer = coolDowntimer;
+            currentTimer = playerCoolDowntimer;
             
 
 

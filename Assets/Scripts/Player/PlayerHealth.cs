@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public static int maxHealth = 10;
     public  static int currentHealth;
 
     public HealthBar healthBar;
@@ -36,6 +36,8 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        print(maxHealth);
     }
 
    
