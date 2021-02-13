@@ -31,7 +31,7 @@ public class Money : MonoBehaviour
         {
 
             
-            moneyText.text = "$" + money;
+            //moneyText.text = "$" + money;
 
 
             scoreAmount = Score.scoreValue;

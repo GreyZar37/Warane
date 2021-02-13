@@ -39,13 +39,13 @@ public class Score : MonoBehaviour
 
       
       
-
+        
         if (PlayerHealth.currentHealth <= 0)
         {
             setHighScore();
         }
 
-
+        /*
         if (PlayerHealth.currentHealth <= 0 && wasSaved == false)
         {
             
@@ -55,7 +55,7 @@ public class Score : MonoBehaviour
 
                 wasSaved = true;
    
-        }
+        }*/
     }
 
     public void setHighScore()

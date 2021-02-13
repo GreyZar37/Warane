@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     float currentTimer;
-    public static float playerCoolDowntimer = 1;
+    public static float playerCoolDowntimer = 1.5f;
     public float lowCoolDownTimer;
 
     public float currentbuffDuration;
@@ -50,7 +50,7 @@ public class Shooting : MonoBehaviour
             currentTimer = 0;
         }
 
-        if (Input.GetButtonDown("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == false && GameManager.isPaused == false)
+        if (Input.GetButton("Fire1") && currentTimer == 0 && ShootBuff.playerIsBuffed == false && GameManager.isPaused == false)
         {
             shoot();
             gunShotSound.Play();

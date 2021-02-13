@@ -8,6 +8,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 
 {
+    private int attackSpeedUpgraded = 0;
+    private int damageUpgraded = 0;
+    private int speedUpgraded = 0;
+    private int healthUpgraded = 0;
+
 
     public GameObject endMenu;
     public GameObject inGameCanvas;
@@ -39,6 +44,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Shooting.playerCoolDowntimer);
+
 
         if (PlayerHealth.playerIsDead == true)
         {
@@ -176,19 +183,45 @@ public class GameManager : MonoBehaviour
 
     public void upgreadeHealth()
     {
-        PlayerHealth.maxHealth++;
+        if (healthUpgraded < 25)
+        {
+            PlayerHealth.maxHealth++;
+            healthUpgraded++;
+        }
+
+     
     }
     public void upgreadeDamage()
     {
-        Bullet.playerDamage++;
+        if (damageUpgraded < 25)
+        {
+            Bullet.playerDamage++;
+            damageUpgraded++;
+        }
+
+        
     }
     public void upgreadeSpeed()
     {
-        PlayerMovement.playerSpeed += 0.25f;
+        if (speedUpgraded < 25)
+        {
+            PlayerMovement.playerSpeed += 0.15f;
+            speedUpgraded++;
+        }
+
+        
     }
     public void upgreadeAttackSpeed()
     {
-        Shooting.playerCoolDowntimer -= 0.15f;
+        
+
+        if (attackSpeedUpgraded < 25)
+        {
+            Shooting.playerCoolDowntimer -= 0.052f;
+            attackSpeedUpgraded++;
+           
+        }
+        
     }
 
 }

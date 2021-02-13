@@ -688,6 +688,7 @@ MonoBehaviour:
   optionMenu: {fileID: 0}
   gameOverCanvas: {fileID: 0}
   signUpMenu: {fileID: 1836908119}
+  upgradeMenu: {fileID: 0}
   inputfield: {fileID: 1604328547}
 --- !u!4 &689962150
 Transform:
@@ -1356,6 +1357,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &1604328548
 MonoBehaviour:
   m_ObjectHideFlags: 0
